@@ -1,4 +1,4 @@
-
+require pry
 name = "Arel" 
 attendees = ["Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz"]
 
@@ -16,7 +16,10 @@ end
   
 def assign_rooms(attendees)
   rooms = []
-  attendees.each_with_index { |name, num| rooms[num] = "Hello, #{name}! You'll be assigned to room #{num + 1}!" }
+  binding.pry 
+  attendees.each_with_index do |name, num| 
+    rooms[num] = "Hello, #{name}! You'll be assigned to room #{num + 1}!" 
+  end 
   return rooms 
 end 
 
